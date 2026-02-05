@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will you be my Valentine? 💘</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+    CUSTOMIZATION (edit these in the HTML below if you want to change later):
+    - Recipient name: search for "Camille" in the card title and success text
+    - Subtitle / promise text: in .card__subtitle
+    - Date line: in .success__date (e.g. "See you on our Valentine date")
+    - Feedback messages when she clicks No: in script.js, feedbackMessages array
+  -->
+  <main class="page">
+    <div class="card" id="card">
+      <h1 class="card__title">Camille, will you be my Valentine? 💘</h1>
+      <p class="card__subtitle">I promise snacks, hugs, and a cute date.</p>
+      <p class="card__feedback" id="feedback" aria-live="polite"></p>
+      <p class="card__only-yes" id="onlyYes" aria-live="polite" hidden>Only 'Yes' is allowed 😄</p>
+      <div class="card__buttons" id="buttonsWrap">
+        <button type="button" class="btn btn--yes" id="btnYes" aria-label="Yes, I'll be your Valentine">
+          Yes 💖
+        </button>
+        <button type="button" class="btn btn--no" id="btnNo" aria-label="No">
+          No 🙈
+        </button>
+      </div>
+    </div>
+
+    <div class="success" id="success" hidden aria-live="polite">
+      <p class="success__title">YAY!!! Camille said YES 💞</p>
+      <p class="success__date">See you on our Valentine date 🥰</p>
+      <div class="hearts" id="hearts" aria-hidden="true"></div>
+      <canvas id="confetti" class="confetti-canvas" aria-hidden="true"></canvas>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
